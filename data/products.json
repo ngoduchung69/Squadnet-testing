@@ -1,0 +1,77 @@
+{
+  "list": [
+    {
+      "id": "1",
+      "name": "Dance Class",
+      "description": "Junior class for age 9 - 12",
+      "price": 200,
+      "options": [
+        {
+          "name": "Level",
+          "variants": [
+            {
+              "name": "Basic"
+            },
+            {
+              "name": "Intermediate",
+              "extra-price": 20
+            },
+            {
+              "name": "Advanced",
+              "extra-price": 40
+            }
+          ]
+        }
+      ],
+      "discounts": [
+        {
+          "membership_only": false,
+          "percent": 5
+        },
+        {
+          "membership_only": true,
+          "amount": 30
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "T-shirt",
+      "description": "Blacktown FC t-shirt",
+      "price": 25,
+      "options": [
+        {
+          "name": "Size",
+          "variants": [
+            {
+              "name": "S"
+            },
+            {
+              "name": "M"
+            },
+            {
+              "name": "L"
+            }
+          ]
+        },
+        {
+          "name": "Colors",
+          "variants": [
+            {
+              "name": "Black"
+            },
+            {
+              "name": "Red"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Ball",
+      "description": "Merchandised",
+      "price": 40
+    }
+  ]
+}
