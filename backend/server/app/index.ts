@@ -4,9 +4,17 @@ import Resolvers from "./Resolvers";
 import express from "express";
 import { ApolloServerPluginDrainHttpServer } from "apollo-server-core";
 import http from "http";
+import mongoose from 'mongoose'
 
 async function startApolloServer(schema: any, resolvers: any) {
   const app = express();
+  const uri: string = "mongodb+srv://admin123:admin123@cluster0.yx6nh.gcp.mongodb.net/?retryWrites=true&w=majority" || ''
+const main = async () => {
+  await mongoose.connect(uri)
+};
+main()
+  .then(() => console.log('🎉 connected to database successfully'))
+  .catch(error => console.error(error));
   const httpServer = http.createServer(app);
   const server = new ApolloServer({
     typeDefs: schema,

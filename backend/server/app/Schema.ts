@@ -6,32 +6,32 @@ const Schema = gql`
     isMember: Boolean
   }
   type Discount {
-    percent: Number,
+    percent: Int,
     type: String,
   }
   type Seat {
     type: String,
-    price: Number,
+    price: Int,
     id: ID!
   }
   type Tshirt {
     color: String,
-    price: Number,
+    price: Int,
     id: ID!
   }
   type Variant {
-    type: 'Tshirt' | 'Seat'
+    type: String
     id: ID,
   }
   type Ticket {
     id: ID!
     userID: ID!
-    variants: []Variant
+    variants: [Variant]
   }
   #handle user commands
   type Query {
-    getAllTypeTshirt: []Tshirt
-    getAllTypeSeat: []Seat
+    getAllTypeTshirt: [Tshirt]
+    getAllTypeSeat: [Seat]
   }
 
   type Mutation {
